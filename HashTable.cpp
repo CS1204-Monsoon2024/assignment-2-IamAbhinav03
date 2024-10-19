@@ -97,6 +97,11 @@ class HashTable
             delete[] values;
         }
 
+        void insert(int key)
+        {
+            insert(key, key);
+        }
+        
         void insert(int key, int value) 
         {
             int index = hashFunction(key);
@@ -172,21 +177,3 @@ class HashTable
     }
 
 };
-
-int main() {
-//     HashTable ht(5);
-
-//     ht.printTable();    // Should print: "- - - - - "
-//     ht.insert(1, 1);
-//     ht.printTable();    // Should print: "- 1 - - - "
-//     ht.insert(4, 4);
-//     ht.printTable();    // Should print: "- 1 - 4 - "
-
-//     ht.remove(5);       // Should print: "Element not found"
-//     ht.insert(1, 100);  // Should print: "Duplicate key insertion is not allowed"
-
-//     ht.insert(0, 2);
-//     ht.printTable();    // Should print: "2 1 - 4 - "
-    
-    return 0;
-}
