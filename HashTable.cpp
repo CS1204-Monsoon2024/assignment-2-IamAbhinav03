@@ -161,7 +161,7 @@ public:
     void printTable() {
         for (int i = 0; i < tableSize; i++) {
             if (keys[i] >=0) std::cout << values[i] << " ";
-            else std::cout << "- ";
+            else std::cout << "_ ";
         }
         std::cout << std::endl;
     }
