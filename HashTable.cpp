@@ -11,10 +11,11 @@ class HashTable
         int nextPrime(int n) 
         {
             // A helper function to find the next prime number greater than n
-            while (true) {
+            while (!isPrime(n))
+            {
                 n++;
-                if (isPrime(n)) return n;
             }
+            return n;
         }
 
         bool isPrime(int n) 
